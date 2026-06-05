@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Akhmadjon Khasanjonov</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="cursor"></div><div id="cursor-glow"></div>
+<div id="google_translate_element" style="display:none;position:absolute;"></div>
+
+<nav id="mainNav">
+  <a href="index.html" class="nav-logo">A · K</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="achievements.html">Achievements</a></li>
+    <li><a href="sacrifice.html">The Price</a></li>
+    <li><a href="philosophy.html">Philosophy</a></li>
+    <li><a href="contact.html" class="active">Contact</a></li>
+  </ul>
+  <div class="lang-switcher">
+    <button class="lang-btn active" data-lang="en">EN</button>
+    <button class="lang-btn" data-lang="ru">RU</button>
+    <button class="lang-btn" data-lang="uz_lat">LAT</button>
+    <button class="lang-btn" data-lang="ar">عر</button>
+  </div>
+  <button class="hamburger"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-menu">
+  <a href="index.html">Home</a><a href="about.html">About</a><a href="achievements.html">Achievements</a>
+  <a href="sacrifice.html">The Price</a><a href="philosophy.html">Philosophy</a><a href="contact.html">Contact</a>
+  <div class="lang-switcher" style="margin-top:20px;">
+    <button class="lang-btn" data-lang="en">EN</button><button class="lang-btn" data-lang="ru">RU</button>
+    <button class="lang-btn" data-lang="uz_lat">LAT</button><button class="lang-btn" data-lang="ar">عر</button>
+  </div>
+</div>
+
+<!-- PAGE HERO -->
+<div class="page-hero" data-bg="CONTACT" style="border-bottom:1px solid var(--border);">
+  <div class="page-hero-content">
+    <span class="section-label">Reach out</span>
+    <h1 class="section-title" style="font-size:clamp(60px,10vw,130px);line-height:.88;">GET IN<br><span class="text-red">TOUCH</span></h1>
+    <p class="section-body" style="max-width:520px;margin-top:24px;">For inquiries, collaborations, or media requests — send a message.</p>
+  </div>
+</div>
+
+<!-- CONTACT SECTION -->
+<section class="padded">
+  <div class="two-col-wide">
+    <div class="reveal-left">
+      <span class="section-label" style="margin-bottom:28px;">Send a Message</span>
+      <form class="contact-form" id="contactForm" novalidate>
+        <div class="form-group">
+          <label class="form-label" for="name">Full Name</label>
+          <input class="form-input" type="text" id="name" name="name" placeholder="Your name" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="email">Email Address</label>
+          <input class="form-input" type="email" id="email" name="email" placeholder="your@email.com" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="message">Message</label>
+          <textarea class="form-textarea" id="message" name="message" placeholder="Your message..." required></textarea>
+        </div>
+        <button type="submit" class="submit-btn">Send Message →</button>
+      </form>
+      <div class="form-success" id="formSuccess">
+        <div style="width:40px;height:2px;background:var(--red);margin-bottom:24px;"></div>
+        <h3 style="font-family:'Bebas Neue',sans-serif;font-size:32px;letter-spacing:2px;color:var(--white);margin-bottom:12px;">Message Sent</h3>
+        <p class="section-body">Thank you for reaching out. A response will come personally as soon as possible.</p>
+      </div>
+    </div>
+
+    <div class="reveal-right">
+      <div class="photo-item" style="margin-bottom:28px;"><img src="images/flag-1.jpg" alt="Akhmadjon Khasanjonov" loading="lazy"></div>
+      <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:32px;">
+        <div class="contact-card">
+          <div class="contact-icon">@</div>
+          <div><div class="contact-info-label">Email</div><div class="contact-info-val">akhmadjonusa2001@gmail.com</div></div>
+        </div>
+        <div class="contact-card">
+          <div class="contact-icon">LOC</div>
+          <div><div class="contact-info-label">Based in</div><div class="contact-info-val">California, United States</div></div>
+        </div>
+      </div>
+      <p style="font-family:'Cormorant Garamond',serif;font-size:17px;color:var(--dim);line-height:1.7;">Feel free to write in <strong style="color:var(--white);">English, Russian, Uzbek, or Arabic</strong>.</p>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<footer>
+  <div class="footer-name">Akhmadjon Khasanjonov</div>
+  <div class="footer-links">
+    <a href="index.html">Home</a><a href="about.html">About</a>
+    <a href="achievements.html">Achievements</a><a href="sacrifice.html">The Price</a><a href="philosophy.html">Philosophy</a>
+  </div>
+  <div class="footer-right">© 2026 · CA State Champion</div>
+</footer>
+
+<script>function googleTranslateElementInit(){new google.translate.TranslateElement({pageLanguage:'en',includedLanguages:'en,ru,uz,ar',autoDisplay:false},'google_translate_element');}</script>
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" async></script>
+<script src="js/main.js"></script>
+</body>
+</html>
