@@ -95,12 +95,15 @@ window.addEventListener('load',()=>{
   if(currentLang!=='en') setTimeout(()=>applyLang(currentLang),1600);
 });
 
+// ===== API BASE URL =====
+const API='https://akhmadjon-website-production.up.railway.app';
+
 // ===== VIEW COUNTER =====
 async function initViewCounter(){
   const el=document.getElementById('viewCount');
   if(!el) return;
   try{
-    const res=await fetch('/api/views',{method:'POST',headers:{'Content-Type':'application/json'}});
+    const res=await fetch(`${API}/api/views`,{method:'POST',headers:{'Content-Type':'application/json'}});
     if(!res.ok) throw new Error();
     const data=await res.json();
     animateCount(el,data.count||0);
@@ -129,7 +132,7 @@ if(contactForm){
     btn.textContent='Sending...';btn.disabled=true;
     const body={name:contactForm.querySelector('[name=name]').value,email:contactForm.querySelector('[name=email]').value,message:contactForm.querySelector('[name=message]').value};
     try{
-      const res=await fetch('/api/contact',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)});
+      const res=await fetch(`${API}/api/contact`,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)});
       if(res.ok){contactForm.style.display='none';if(successEl)successEl.classList.add('visible');}
       else throw new Error();
     } catch{btn.textContent='Error — Try Again';btn.disabled=false;setTimeout(()=>{btn.textContent=origText;},3000);}
